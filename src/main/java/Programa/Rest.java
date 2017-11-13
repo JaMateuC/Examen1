@@ -33,7 +33,7 @@ public class Rest {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response newTrack(Pedido pedido) {
 
-        pmi.doPedido();
+        //pmi.doPedido();
         return Response.status(201).entity("Pedido anadido").build();
     }
 }
