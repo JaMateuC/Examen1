@@ -7,9 +7,16 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resource" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" exported="" name="junit:junit:4.12" level="project" />
+    <orderEntry type="library" exported="" name="org.json:json:20171018" level="project" />
+    <orderEntry type="library" exported="" name="org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.3" level="project" />
+    <orderEntry type="library" exported="" name="org.glassfish.jersey.media:html-json:2.4" level="project" />
+    <orderEntry type="library" exported="" name="org.glassfish.jersey.media:jersey-media-moxy:2.4.1" level="project" />
   </component>
 </module>
