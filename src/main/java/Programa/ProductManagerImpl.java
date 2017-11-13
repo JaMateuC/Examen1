@@ -21,79 +21,7 @@ public class ProductManagerImpl implements ProductManager {
 
         listaProductos = new ArrayList<Producto>();
         pedidosServidos = new ArrayList<Pedido>();
-        colaPedidos = new Queue<Pedido>() {
-            public boolean add(Pedido pedido) {
-                return false;
-            }
-
-            public boolean offer(Pedido pedido) {
-                return false;
-            }
-
-            public Pedido remove() {
-                return null;
-            }
-
-            public Pedido poll() {
-                return null;
-            }
-
-            public Pedido element() {
-                return null;
-            }
-
-            public Pedido peek() {
-                return null;
-            }
-
-            public int size() {
-                return 0;
-            }
-
-            public boolean isEmpty() {
-                return false;
-            }
-
-            public boolean contains(Object o) {
-                return false;
-            }
-
-            public Iterator<Pedido> iterator() {
-                return null;
-            }
-
-            public Object[] toArray() {
-                return new Object[0];
-            }
-
-            public <T> T[] toArray(T[] ts) {
-                return null;
-            }
-
-            public boolean remove(Object o) {
-                return false;
-            }
-
-            public boolean containsAll(Collection<?> collection) {
-                return false;
-            }
-
-            public boolean addAll(Collection<? extends Pedido> collection) {
-                return false;
-            }
-
-            public boolean removeAll(Collection<?> collection) {
-                return false;
-            }
-
-            public boolean retainAll(Collection<?> collection) {
-                return false;
-            }
-
-            public void clear() {
-
-            }
-        };
+        colaPedidos = new Queue<Pedido>(100);
 
     }
 
@@ -144,7 +72,7 @@ public class ProductManagerImpl implements ProductManager {
             producto.setNumComprado(producto.getNumComprado() + 1);
         }
 
-        colaPedidos.add(pedido);
+        colaPedidos.push(pedido);
 
         logger.info(pedido);
     }
@@ -156,7 +84,7 @@ public class ProductManagerImpl implements ProductManager {
             logger.info(pedido.getNombre());
         }*/
 
-        Pedido pedido = this.colaPedidos.poll();
+        Pedido pedido = this.colaPedidos.pop();
         pedidosServidos.add(pedido);
 
         logger.info("lista servidos");
@@ -222,7 +150,6 @@ public class ProductManagerImpl implements ProductManager {
 
         listaProductos.clear();
         pedidosServidos.clear();
-        colaPedidos.clear();
 
     }
 

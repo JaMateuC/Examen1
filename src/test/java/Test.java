@@ -86,6 +86,16 @@ public class Test {
         pmi.addProducto(new Producto(20,"c"));
         pmi.addProducto(new Producto(3,"a"));
         pmi.addProducto(new Producto(5,"b"));
+        List<Producto> list1 = new ArrayList<Producto>();
+        list1.add(new Producto(20,"c"));
+        list1.add(new Producto(3,"a"));
+        List<Producto> list2 = new ArrayList<Producto>();
+        list1.add(new Producto(20,"c"));
+        pmi.doPedido("alb", list1, "lista");
+        pmi.doPedido("aaa", list2, "lista2");
+        pmi.servirPedido();
+        pmi.servirPedido();
+        pmi.listadoMasVendido();
 
 
 

@@ -47,6 +47,6 @@ public class Pedido {
 
     @Override
     public String toString(){
-        return "NombreUsuario:" + usuario + "NombrePedido:" + nombre;
+        return "NombreUsuario:" + usuario + ", NombrePedido:" + nombre;
     }
 }
